@@ -1,0 +1,12 @@
+﻿@import 'nullstyle.scss';
+.cards{
+    border: 1px solid rgb(85, 85, 85);
+    margin-bottom: 20px;
+    margin-left: 100px;
+    width: 550px;
+    padding-left: 25px;
+    img{
+        overflow: hidden;
+        width: 500px;
+    }
+}
