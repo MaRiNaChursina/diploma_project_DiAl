@@ -17,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "yarn run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
@@ -42,9 +42,7 @@
     "gh-pages": "^5.0.0",
     "webpack": "^5.78.0",
     "webpack-cli": "^5.0.1"
-  },
-  "main": "index.js",
-  "author": "Chursina Marina",
-  "license": "ISC"
+  }
+
 }
 
