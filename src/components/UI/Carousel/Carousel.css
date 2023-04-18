@@ -1,0 +1,18 @@
+﻿.main-container{
+    height: 450px;
+    width: 450px;
+    display: flex;
+    align-items: center;
+}
+.window{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.all-items-container{
+    height: 100%;
+    display: flex;
+}
+.arrow{
+    cursor: pointer;
+}

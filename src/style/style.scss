@@ -19,7 +19,7 @@
         width: 500px;
         filter: brightness(40%)
     }
-    >h2, >p, >button{
+    >h2, >p,>button{
         position: absolute;
         top: 30%;
         left: 65px;
@@ -45,8 +45,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
+    padding-right: 50px;
     img{
         height: 100%;
         width: auto;
     }
+}
+
+.item-1{
+    background-color: aquamarine;
+}
+.item-2{
+    background-color: rgb(161, 127, 255);
+}
+.item-3{
+    background-color: rgb(142, 255, 127);
+}
+.item-4{
+    background-color: rgb(255, 127, 244);
 }

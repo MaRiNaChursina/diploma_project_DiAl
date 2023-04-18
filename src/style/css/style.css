@@ -115,8 +115,28 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  padding-right: 50px;
 }
 .model__content-img img {
   height: 100%;
   width: auto;
+}
+
+.item-1 {
+  background-color: aquamarine;
+}
+
+.item-2 {
+  background-color: rgb(161, 127, 255);
+}
+
+.item-3 {
+  background-color: rgb(142, 255, 127);
+}
+
+.item-4 {
+  background-color: rgb(255, 127, 244);
 }
