@@ -1,0 +1,33 @@
+﻿.NavList{
+    float: right;
+    margin-top: -26px;
+    
+}
+.link{
+    color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 5px 10px;
+  position: relative;
+    padding-right: 5px;
+    cursor: pointer;
+}
+.link::after{
+    content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: block;
+  background: none repeat scroll 0 0 transparent;
+  height: 2px;
+  width: 0;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+.link:hover::after{
+    width: 100%; 
+    left: 0;
+    
+ 
+}

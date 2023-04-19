@@ -29,3 +29,15 @@
 .modal__content.active{
     transform: scale(1);
 }
+
+.modal__content-close{
+    cursor: pointer;
+    position: relative;
+    float: right;
+    top:-35px;
+    right: -35px;
+    height: 35px;
+    width: 35px;
+    color: brown;
+
+}
