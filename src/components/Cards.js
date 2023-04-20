@@ -2,7 +2,7 @@ import React from "react";
 import cards from "../data/bd";
 import CardList from "./CardList";
 
-function App() {
+function Cards() {
   return (
     <div className="app">
         <h1>Карты</h1>
@@ -11,4 +11,4 @@ function App() {
   );
 }
 
-export default App;
+export default Cards;

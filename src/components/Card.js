@@ -1,5 +1,5 @@
 ﻿import React, { useState } from "react";
-import MyButton from "./UI/button/MyButton";
+
 import Modal from "../components/UI/Modal/Modal";
 import Carousel from "./UI/Carousel/Carousel";
 

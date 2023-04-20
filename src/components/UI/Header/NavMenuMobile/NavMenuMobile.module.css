@@ -9,7 +9,7 @@
     margin-top: 10px;
     position: absolute;
     z-index: 99;
-    margin-left: -37%;
+    margin-left: -20vw;
 }
 
 .link{
@@ -24,6 +24,7 @@
     height: 25px;
     margin-right: 15px;
     cursor: pointer;
+    color: #fff;
 }
 
 .link{

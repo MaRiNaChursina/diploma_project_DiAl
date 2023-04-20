@@ -8,7 +8,7 @@
     },
     {
         "id":1,
-        "imgCard":"./imges/products/Stenka.JPG",
+        "imgCard":'./imges/products/Cooking.JPG',
         "title":"Название продукта2",
         "price":" 1111 "
     },

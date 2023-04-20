@@ -14,14 +14,6 @@ export default function Header(){
       query: "(min-width: 1224px)"
     });
    
-    const isTablet = useMediaQuery({
-      query: "(max-width: 1224px)"
-    });
-   
-    const isMobile = useMediaQuery({
-      query: "(max-width: 786px)"
-    });
-
     return (
         <div className={style.header}>
             <div className={style.logo}>
