@@ -15,14 +15,16 @@ export default function Header(){
     });
    
     return (
-        <div className={style.header}>
-            <div className={style.logo}>
-                <img className={style.img} src="./imges/logo.svg"/>
-                <p className={style.logo_p}>DiAl</p>
+        <header>
+            <div className={style.header}>
+                <div className={style.logo}>
+                    <img className={style.img} src="./imges/logo.svg"/>
+                    <p className={style.logo_p}>DiAl</p>
+                </div>
+                <div className={style.burgerMenu}>
+                    {isDesktop? <NavMenu/>: <NavMenuMobiles />}
+                </div>
             </div>
-            <div className={style.burgerMenu}>
-                {isDesktop? <NavMenu/>: <NavMenuMobiles />}
-            </div>
-        </div>
+        </header>
     )
 }

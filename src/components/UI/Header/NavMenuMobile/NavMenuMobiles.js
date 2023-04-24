@@ -1,7 +1,7 @@
 ﻿import React, { useState } from "react";
 import style from "./NavMenuMobile.module.css";
 import {SlClose, SlMenu} from "react-icons/sl"
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 
@@ -13,8 +13,8 @@ export default function NavMenuMobiles() {
            {menuActive ? <SlMenu className={style.logo} onClick={() => setMenuActive(false)}/>: <SlClose className={style.logo} onClick={() => setMenuActive(true)}/>}
            <div menuActive>
                 <nav className={menuActive ? style.navLinkActive: style.navLink}>
-                    <Link to="/" className={style.link} >Главная</Link>
-                    <Link to="/work" className={style.link} >Наши работы</Link>
+                    <NavLink  to="/" className={style.link} >Главная</NavLink >
+                    <NavLink  to="/work" className={style.link} >Наши работы</NavLink >
                     <a className={style.link} >Полезная информация</a>
                     <a className={style.link} >Доставка</a>
                     <a className={style.link} >Заказ</a> {/*Предварительный расчет, описание о заказе, статус заказа*/}

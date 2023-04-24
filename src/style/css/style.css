@@ -140,3 +140,8 @@ h1, h2, h3, h4, h5, h6 {
 .item-4 {
   background-color: rgb(255, 127, 244);
 }
+
+header .active {
+  color: blueviolet;
+  cursor: auto;
+}

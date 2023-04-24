@@ -3,12 +3,13 @@ import React from "react";
 
 
 
+
 export default function Main(){
    
     return(
-        <div className="Main">
+        <div className="main">
             <p>Главная</p>
-            
+
         </div>
     )
 }

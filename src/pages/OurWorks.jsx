@@ -1,11 +1,12 @@
 ﻿import React from "react";
-import Cards from "../components/Cards";
+import CatalogList from "../components/UI/CatalogCard/CatalogList";
+import cards from "../data/catalogbd.js"
 
 export default function OurWorks(){
    
     return(
         <div className="Main">
-           <Cards/>
+            <CatalogList cards = {cards}/>
         </div>
     )
 }
