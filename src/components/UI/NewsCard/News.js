@@ -8,7 +8,7 @@ function News(props) {
 
      {if(title == card.title)
     return (
-      <div className="NewsCards">
+      <div className="news__cards">
           <img src={ card.imgCard}/>
          <h2>{card.title}</h2>
          <p>{card.text}</p>

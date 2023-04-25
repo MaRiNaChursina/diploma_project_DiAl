@@ -5,7 +5,7 @@ import NewsList from "../components/UI/NewsCard/NewsList";
 export default function OurWorks(){
    
     return(
-        <div className="Main">
+        <div className="main">
             <NewsList cards = {cards}/>
         </div>
     )
