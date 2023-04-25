@@ -5,7 +5,7 @@ import CardList from "./CardList";
 
 function Cards() {
   return (
-    <div className="app">
+    <div className="cart">
         <h1>Карты</h1>
         <CardList cards = {cards}/>
         

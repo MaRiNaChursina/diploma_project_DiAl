@@ -7,6 +7,8 @@ import OurWorks from "./pages/OurWorks";
 import CardList from "./components/CardList";
 import cards from "./data/bd.js";
 import Cards from "./components/Cards";
+import News from "./pages/News";
+import NewsCard from "./components/UI/NewsCard/NewsCard";
 
 const App =() =>{
     return(
@@ -19,6 +21,8 @@ const App =() =>{
 				<Route  path="/" element={<Main/>}/>
 				<Route path="work" element={<OurWorks/>}/>	
 				<Route path="work/:catalogName" element={<Cards/>}/>
+				<Route path="news" element={<News/>}/>
+				<Route path="news/:title" element={<NewsCard/>}/>
 				<Route path="*" element={<Navigate to="/" replace />}/>
 			</Routes>
 		</Router>
