@@ -47,11 +47,11 @@ export default function Carousel ({children}) {
    return( 
          <div className="main-container">
             <FaChevronLeft className="arrow" onClick={handleLeftArrowClick}/>
-                <div className="window">
-                    <div className="all-items-container" style ={{transform:`translateX(${offset}px)`}}>
-                        {items}
-                    </div>
-                </div> 
+            <div className="window">
+                <div className="all-items-container" style ={{transform:`translateX(${offset}px)`}}>
+                    {items}
+                </div>
+            </div> 
             <FaChevronRight className="arrow" onClick={handleRightArrowClick}/>
         </div>
     )

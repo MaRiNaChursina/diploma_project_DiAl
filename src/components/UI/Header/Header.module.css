@@ -1,14 +1,14 @@
 ﻿.logo{  
     display: flex;
-    width: 100px;
+    width: 70px;
     align-items: center;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: rgb(255, 255, 255);
+    color: #A3907E;
 }
 .header{
     height: 50px;
-    background-color: brown;
+    background-color: #47382a;
     padding-top: 10px;
     padding-left: 25px;
 }

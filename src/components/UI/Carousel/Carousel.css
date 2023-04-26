@@ -3,6 +3,7 @@
     width: 450px;
     display: flex;
     align-items: center;
+    margin-left: 100px;
 }
 .window{
     height: 100%;
@@ -15,4 +16,30 @@
 }
 .arrow{
     cursor: pointer;
+    height: 450px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width:800px) {
+    .all-items-container{
+        height: 100%;
+
+    }
+    .window{
+        width: 70%;
+    }
+   
+}
+
+
+@media (max-width:460px) {
+    .main-container{
+        height: 350px;
+    }
+
+    .window{
+        width: 65%;
+    }
 }

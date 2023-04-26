@@ -1,4 +1,16 @@
 ﻿@import 'nullstyle.scss';
+
+.wrapper{
+    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main, .main__work, .main__news {
+    
+  
+  }
+
 .cards{
     border: 1px solid rgb(85, 85, 85);
     margin-bottom: 20px;
@@ -27,7 +39,7 @@
         
         justify-content: center;
         text-transform: uppercase;
-        color: white;
+        color: #f9f6f4;
         width: 360px;
         background: #000000bb;
         padding: 10px;
@@ -56,22 +68,13 @@
     }
 }
 
-.item-1{
-    background-color: aquamarine;
-}
-.item-2{
-    background-color: rgb(161, 127, 255);
-}
-.item-3{
-    background-color: rgb(142, 255, 127);
-}
-.item-4{
-    background-color: rgb(255, 127, 244);
-}
+
+
+
 
 header{
     .active{
-        color: blueviolet;
+        color: #8EA076;
         cursor: auto;
     }
 }
@@ -79,8 +82,9 @@ header{
     display:flex;
     margin: 0 5% 10px ;
     border: 2px solid black;
-    
-    
+    background-color: #ffffff; 
+    color: #000000;
+    width: 50%;
     
     img{
         width: 200px;
@@ -91,23 +95,50 @@ header{
         padding-top: 10px;
         display: flex;
         flex-direction:column;
-        justify-content:space-between;        
+        justify-content:space-between;   
+            
     }
     p{
         padding: 10px 0px;
     }
+    a{
+        color: #1A292B;
+    }
+
     
 }
+.news__cards{
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    
+    img{
+        
+        height: 250px;
+        width: auto;
+    }
+}
+
+
 
 footer{
-    background-color: bisque;
+    background-color: #564734;
+    
+    
+
 }
 .footer{
     width: 100%;
-    height: 50px;
+    height: 100px;
     display: flex;
     flex-wrap:wrap;
     flex-direction:column;
+    padding-top: 10px;
+    padding-left: 5%;
+    a{
+        color: 	#A38971;
+        padding-bottom: 10px;
+    }
     
 }
 .footer__logo{
@@ -115,6 +146,9 @@ footer{
     align-items: center;
     text-transform: uppercase;
     letter-spacing: 0.15em;
+    color: 	beige;
+    padding-top: 15px;
+    padding-bottom: 50px;
     img{
         width:40px;
         padding-top: 5px;
@@ -122,11 +156,15 @@ footer{
     }
 }
 .footer__document{
-    background-color: rgb(163, 163, 163);
+    background-color: #171F21;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 14px;
+    color: 	#3d6a70;
+    a{
+        color: #689095;
+    }
 }
 
 @media (max-width: 1150px) and (min-width: 870px) {
@@ -139,4 +177,24 @@ footer{
         }
     }
     
+}
+
+@media (max-width:800px) {
+    .model__content-img{
+        
+        img{
+            height: auto;
+            width: 100%;
+        }
+    }
+   
+}
+
+@media (max-width:460px) {
+    .model__content-img{
+        
+        img{
+            margin-top: -30px;
+        }
+    }
 }

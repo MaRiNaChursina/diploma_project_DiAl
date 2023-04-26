@@ -38,6 +38,24 @@
     right: -35px;
     height: 35px;
     width: 35px;
-    color: brown;
+    color: #445F3B;
 
+}
+
+@media (max-width:800px) {
+    .modal__content{
+        height: 700px;
+        width: 400px;
+    }
+    
+}
+@media (max-width:460px) {
+    .modal__content{
+        height: 600px;
+        width: 360px;
+    }
+    .modal__content-close{
+        top:-21px;
+        right: -22px;
+    }
 }
