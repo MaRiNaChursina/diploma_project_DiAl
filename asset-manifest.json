@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/diploma_project_DiAl/static/css/main.39bc0322.css",
+    "main.css": "/diploma_project_DiAl/static/css/main.afc56291.css",
     "main.js": "/diploma_project_DiAl/static/js/main.554b2edc.js",
+    "static/media/fon.png": "/diploma_project_DiAl/static/media/fon.e7c21061e4b9e7764be3.png",
     "index.html": "/diploma_project_DiAl/index.html",
-    "main.39bc0322.css.map": "/diploma_project_DiAl/static/css/main.39bc0322.css.map",
+    "main.afc56291.css.map": "/diploma_project_DiAl/static/css/main.afc56291.css.map",
     "main.554b2edc.js.map": "/diploma_project_DiAl/static/js/main.554b2edc.js.map"
   },
   "entrypoints": [
-    "static/css/main.39bc0322.css",
+    "static/css/main.afc56291.css",
     "static/js/main.554b2edc.js"
   ]
 }
