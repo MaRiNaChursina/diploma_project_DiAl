@@ -5,7 +5,7 @@ import cards from "../data/catalogbd.js"
 export default function OurWorks(){
    
     return(
-        <div className="main">
+        <div className="main__work">
             <CatalogList cards = {cards}/>
         </div>
     )

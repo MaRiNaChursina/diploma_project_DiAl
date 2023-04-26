@@ -1,4 +1,5 @@
 ﻿import React from "react";
+import { Link } from "react-router-dom";
 
 
 export default function CardNews (props){
@@ -11,8 +12,13 @@ export default function CardNews (props){
                 <>
                     <div className="news">
                         <img src={ leng.news.imgCard}/>
-                        <h2>{leng.news.title}</h2>
-                        <p>{leng.news.discription}</p>
+                        <div className="news__text">
+                            <h2>{leng.news.title}</h2> 
+                            <p>{leng.news.discription}</p>
+                            <Link to={`/news/${leng.news.title}`} className="catalog__cards">
+                                Подробнее
+                            </Link>
+                        </div>
                     </div>
                 </>
                 

@@ -9,7 +9,7 @@ import cards from "./data/bd.js";
 import Cards from "./components/Cards";
 import News from "./pages/News";
 import NewsCard from "./components/UI/NewsCard/NewsCard";
-import Footer from "./components/UI/Footer/Footer";
+import Footer from "./components/Footer/Footer";
 
 const App =() =>{
     return(
