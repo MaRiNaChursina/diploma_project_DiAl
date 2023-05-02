@@ -18,7 +18,7 @@ export default function NavMenuMobiles() {
                     <NavLink  to="work" className={style.link} >Наши работы</NavLink >
                     <NavLink to="news" className={style.link} >Полезная информация</NavLink>
                     <a className={style.link} >Доставка</a>
-                    <a className={style.link} >Заказ</a> {/*Предварительный расчет, описание о заказе, статус заказа*/}
+                    <NavLink to="order" className={style.link} >Заказ</NavLink> {/*Предварительный расчет, описание о заказе, статус заказа*/}
                     <a className={style.link} >Кто мы?</a>
                 </motion.nav>
             </div>

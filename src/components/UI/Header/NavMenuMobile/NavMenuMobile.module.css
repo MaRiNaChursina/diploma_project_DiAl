@@ -63,3 +63,12 @@
 .navLinkActive{
     display: none;
 }
+
+@media (max-width:460px) {
+    .navLink{
+        
+        margin-left: -32vw;
+        
+      
+    }
+}

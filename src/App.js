@@ -10,6 +10,7 @@ import Cards from "./components/Cards";
 import News from "./pages/News";
 import NewsCard from "./components/UI/NewsCard/NewsCard";
 import Footer from "./components/Footer/Footer";
+import Order from "./pages/Order";
 
 const App =() =>{
     return(
@@ -24,6 +25,7 @@ const App =() =>{
 				<Route path="work/:catalogName" element={<Cards/>}/>
 				<Route path="news" element={<News/>}/>
 				<Route path="news/:title" element={<NewsCard/>}/>
+				<Route path="order" element={<Order/>}/>
 				<Route path="*" element={<Navigate to="/" replace />}/>
 			</Routes>
 			<Footer/>

@@ -6,7 +6,7 @@ import CardList from "./CardList";
 function Cards() {
   return (
     <div className="cart">
-        <h1>Карты</h1>
+        <h1>Наши работы</h1>
         <CardList cards = {cards}/>
         
     </div>

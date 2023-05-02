@@ -37,6 +37,7 @@
 @media (max-width:460px) {
     .main-container{
         height: 350px;
+        margin-left: 0;
     }
 
     .window{

@@ -13,7 +13,7 @@ export default function CatalogList({cards}){
         </li>
     )
     return(
-        <ul>
+        <ul className="catalog__card">
             {cardElements}
         </ul>
     )

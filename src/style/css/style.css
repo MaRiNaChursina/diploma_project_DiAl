@@ -31,14 +31,6 @@ html, body {
   -webkit-text-size-adjust: 100%;
 }
 
-input, button, textarea {
-  font-family: inherit;
-}
-
-input::-ms-clear {
-  display: none;
-}
-
 button {
   cursor: pointer;
 }
@@ -74,6 +66,22 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.cart {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.cart h1 {
+  padding-bottom: 100px;
+  text-align: center;
+  font-size: 30px;
+  padding-top: 50px;
+}
+.cart ul {
+  display: flex;
+  justify-content: space-around;
 }
 
 .cards {
@@ -171,6 +179,10 @@ header .active {
   width: auto;
 }
 
+.catalog__cards img {
+  width: 100%;
+}
+
 footer {
   background-color: #564734;
 }
@@ -231,9 +243,24 @@ footer {
     height: auto;
     width: 100%;
   }
+  .news {
+    width: auto;
+  }
 }
 @media (max-width: 460px) {
   .model__content-img img {
     margin-top: -30px;
   }
+  .cards {
+    width: 350px;
+    height: 336px;
+  }
+  .cards > h2, .cards > p, .cards > button {
+    width: 330px;
+    left: 3%;
+  }
+}
+input {
+  background-color: #8f8f8f;
+  margin-top: 10px;
 }

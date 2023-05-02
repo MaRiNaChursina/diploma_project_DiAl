@@ -31,14 +31,6 @@ html, body {
   -webkit-text-size-adjust: 100%;
 }
 
-input, button, textarea {
-  font-family: inherit;
-}
-
-input::-ms-clear {
-  display: none;
-}
-
 button {
   cursor: pointer;
 }
