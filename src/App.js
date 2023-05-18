@@ -8,6 +8,8 @@ import News from "./pages/News";
 import NewsCard from "./components/UI/NewsCard/NewsCard";
 import Footer from "./components/Footer/Footer";
 import Order from "./pages/Order";
+import OrderForm from "./components/OrderForm/OrderForm";
+import InvoiceForm from "./components/OrderForm/InvoiceForm";
 
 const App =() =>{
     return(
@@ -19,7 +21,10 @@ const App =() =>{
 				<Route path="work/:catalogName" element={<Cards/>}/>
 				<Route path="news" element={<News/>}/>
 				<Route path="news/:title" element={<NewsCard/>}/>
-				<Route path="order" element={<Order/>}/>
+				<Route path="order/*" element={<Order/>}>
+					<Route path="orders" element={<OrderForm/>}/>
+					<Route path="invoice" element={<InvoiceForm/>}/>
+				</Route>
 				<Route path="*" element={<Navigate to="/" replace />}/>
 			</Routes>
 			<Footer/>

@@ -1,5 +1,5 @@
 ﻿import React from "react";
-import OrderForm from "../components/OrderForm/OrderForm";
+import { NavLink, Outlet } from "react-router-dom";
 
 
 
@@ -9,7 +9,10 @@ export default function Main(){
    
     return(
         <div className="main__order">
-            <OrderForm/>
+            <p></p>
+            <NavLink to="orders">Сделать заказ</NavLink>
+            <NavLink to="invoice">Произвести предварительный расчет</NavLink>
+            <Outlet />
         </div>
     )
 }

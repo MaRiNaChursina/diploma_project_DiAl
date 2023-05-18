@@ -3,6 +3,7 @@ import React from "react";
 import CardsList from "../components/Main/CardsList";
 import OrderForm from "../components/OrderForm/OrderForm";
 import LogoAdmin from "../components/AdminP/LogoAdmin";
+import InvoiceForm from "../components/OrderForm/InvoiceForm";
 
 
 
@@ -12,8 +13,9 @@ export default function Main(){
    
     return(
         <div className="main">
-            <LogoAdmin/>
-            {/* <CardsList/> */}
+            {/* <LogoAdmin/> */}
+            <CardsList/>
+            {/* <InvoiceForm/> */}
         </div>
     )
 }
