@@ -12,10 +12,12 @@ const Footer = () => {
                 <div className="footer__logo">
                     <img src="./imges/logo.svg"/>
                     <p>DiAl</p>
+
                 </div>
                 <a >Доставка</a>
                 <a  >Заказ</a> {/*Предварительный расчет, описание о заказе, статус заказа*/}
                 <a  >Кто мы?</a>
+                <Link to='admin'>Для сотрудников</Link>
             </div>
             <div className="footer__document">
                 <p>Website author:</p>

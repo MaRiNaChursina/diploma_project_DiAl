@@ -1,11 +1,12 @@
 ﻿import React from "react";
 import Card from "./Card";
-import cards from "../data/bd";
+// import cards from "../data/bd";
 
-export default function CardList(){
-    
+export default function CardList(props){
+    const {cards}=props;
+    const {chekCard} =props;
     const cardElements = cards.map(cards => 
-        <li key={cards.id}><Card card = {cards}/></li>
+        <><Card card = {cards} chekCard={chekCard}/></>
     )
     return(
         <ul>

@@ -7,14 +7,13 @@ const InvoiceForm = () => {
     const [value2, setValue2]  = useState (null);
     const [value10, setValue10] = useState (null);
     const [value3, setValue3]  = useState (null);
-    const [value4, setValue4]  = useState (1);
-    const [value5, setValue5]  = useState (null);
-    const [checked3, setChecked3]  = useState (false);
+    
+   
     const [value12, setValue12]  = useState (null);
-    const [checked4, setChecked4]  = useState (false);
+    
     const [value7, setValue7]  = useState (null);
     const [value9, setValue9]  = useState (null);
-    const [value8, setValue8]  = useState (null);
+    
     const [value11, setValue11]  = useState (null);
     const[raschet, setRaschet] =useState (null);
     const [checked5, setChecked5]  = useState (false);
@@ -22,7 +21,13 @@ const InvoiceForm = () => {
     const [value6, setValue6]  = useState (null);
     const [value13, setValue13]  = useState (null);
     const item1 = ["Прямая","Угловая","П-образная","с островом"];
-    
+// расчетная форма столещницы 
+    const [value4, setValue4]  = useState (1);
+    const [value5, setValue5]  = useState (null); 
+    const [checked3, setChecked3]  = useState (false);
+    const [checked4, setChecked4]  = useState (false);
+    const [value8, setValue8]  = useState (null);
+
     let li = <></>;
     function Antri (e) {
         let zn="";
@@ -350,6 +355,11 @@ const Primer =(value5)=>{
     
     const submitForm = (e)=>{
         e.preventDefault();
+        let dat = new Date();
+        let ddat = dat.getDate();
+        ddat=ddat+" "+(dat.getMonth()+1);
+        ddat=ddat+" "+dat.getFullYear();
+        console.log(ddat);
         const sendData ={
             length:value,
             form_kitchen:checked1,
@@ -365,7 +375,8 @@ const Primer =(value5)=>{
             box_option:value11,
             raschet:raschet,
             name:value6,
-            phone:value13
+            phone:value13,
+            date:ddat,
         }
         console.log(sendData)
        fetch("http://dial.ru/index.php",{
@@ -439,9 +450,6 @@ const Primer =(value5)=>{
                 <option value="4">Кварцевый агломерат</option>
             </select>
             <br/>
-            {/*  
-            Формула: ценновая категория *метр протяженности
-            */}
             {checked3 === true && <div><br/>
             <h1>Выбирите ценовую категорию</h1>
             <select value={value5} onChange={Kateg}required>
@@ -520,11 +528,11 @@ const Primer =(value5)=>{
             {answer==="true" && <div>
                 <p>Ваш запрос принят!<br/> Ожидайте нашего звонка!</p>
                 </div>}
-            {raschet}
-            <br/>
-            {checked5== true && <>
-            <p>Если Вас все утраивает и хотите отправить свой заказ</p>
-            <label for="name">Как к Вам обращаться:</label><input name="name" value={value6} onChange={(e)=> setValue6(e.target.value)}/>
+            
+            
+            {checked5== true && <><p> Примерно {raschet}</p><br/>
+            <p>Если Вас все утраивает и хотите отправить свой заказ:</p>
+            <label for="name">Как к Вам обращаться:</label><input name="name" value={value6} onChange={(e)=> setValue6(e.target.value)}/><br/>
             <label for="phone">Ваш номер телефона:</label><input name="phone" value={value13} onChange={(e)=> setValue13(e.target.value)}/>
             <button type="submit" >Отправить форму</button>
             </>}

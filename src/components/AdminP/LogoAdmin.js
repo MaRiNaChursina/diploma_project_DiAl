@@ -2,8 +2,12 @@
 import { useState } from "react";
 import { Link, redirect } from "react-router-dom";
 
+import CardsList from "../Main/CardsList";
+import FormAdmin from "./FormAdmin";
+
 
 export default function LogoAdmin (){
+    const [admin, setAdmin] = useState(false);
     const [data, setData] = useState({
         username:"",
         password:""
@@ -20,7 +24,6 @@ export default function LogoAdmin (){
             password: data.password
         }
         
-        console.log(sendData)
         fetch("http://logo.ru/do_login.php",{
             method:"POST",
             header: {
@@ -29,21 +32,22 @@ export default function LogoAdmin (){
             body: JSON.stringify(sendData)
         })
         .then ((result)=>{
-            console.log(result);
-            if (result.redirected == true) {return(<><h1>dsfse</h1></>); }
+            if (result.redirected == true) setAdmin(true);
         })
     }
 
    return( 
         
              <>
-                <form onSubmit={submitForm} >
+                {admin ? <><FormAdmin/></>:<form onSubmit={submitForm} >
                         <legend>Контактная информация</legend>
                         <p><label htmlFor="username">Имя <em>*</em></label><input type="text" id="username" name="username" onChange={handelChange} value={data.username}/></p>
                         <p><label htmlFor="password">Пароль</label><input type="password" id="password" name="password" onChange={handelChange} value={data.password}/></p>
                         <button type="submit" >Отправить форму</button>
                         
-                </form>
+                </form>}
+                
+                
                
         </>
         )

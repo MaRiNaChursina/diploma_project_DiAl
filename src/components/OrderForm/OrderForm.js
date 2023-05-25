@@ -1,4 +1,4 @@
-﻿import axios from "axios";
+﻿
 import React from "react";
 import { useState } from "react";
 
@@ -13,9 +13,14 @@ export default function OrderForm (){
     }
     const submitForm = (e)=>{
         e.preventDefault();
+        let dat = new Date();
+        let ddat = dat.getDate();
+        ddat=ddat+" "+(dat.getMonth()+1);
+        ddat=ddat+" "+dat.getFullYear();
         const sendData ={
             first_name: data.first_name,
-            phone: data.phone
+            phone: data.phone,
+            date:ddat
         }
         console.log(sendData)
         fetch("http://dial.ru/index1.php",{
@@ -32,8 +37,8 @@ export default function OrderForm (){
     return(
         <form onSubmit={submitForm} >
                 <legend>Контактная информация</legend>
-                <p><label htmlFor="first_name:">Имя <em>*</em></label><input type="text" id="name" name="first_name" onChange={handelChange} value={data.first_name}/></p>
-                <p><label htmlFor="phone:">E-mail</label><input type="text" id="phone" name="phone" onChange={handelChange} value={data.phone}/></p>
+                <p><label htmlFor="first_name:">Как к Вам обращаться</label><input type="text" id="name" name="first_name" onChange={handelChange} value={data.first_name} required/></p>
+                <p><label htmlFor="phone:">Номер телефона</label><input type="text" id="phone" name="phone" onChange={handelChange} value={data.phone} required/></p>
                 <button type="submit" >Отправить форму</button>
         </form>
     )
