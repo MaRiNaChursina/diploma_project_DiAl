@@ -76,21 +76,36 @@ function CardInsert(props)
     return(
     <>
         {/* <img src={card.imgCard}/> */}
+        <h2>Данные о {titles}</h2>
         <form >
-        <input value={titles} onChange={(e)=>setTitles(e.target.value)}/><br/>
-        <input value={prices} onChange={(e)=>setPrices(e.target.value)}/><br/>
-        <input value={catalogNames} onChange={(e)=>setCatalogNames(e.target.value)}/><br/>
-        <input value={lengths} onChange={(e)=>setLengths(e.target.value)}/><br/>
-        <input value={kitchens} onChange={(e)=>setKitchens(e.target.value)}/><br/>
-        <input value={drawers} onChange={(e)=>setDrawers(e.target.value)}/><br/>
-        <input value={methods} onChange={(e)=>setMethods(e.target.value)}/><br/>
-        <input value={facads} onChange={(e)=>setFacads(e.target.value)}/><br/>
-        <input value={tables} onChange={(e)=>setTables(e.target.value)}/><br/>
-        <input value={catalogs} onChange={(e)=>setCatalogs(e.target.value)}/><br/>
-        <input value={walls} onChange={(e)=>setWalls(e.target.value)}/> <br/>
-        <input value={loopses} onChange={(e)=>setLoopses(e.target.value)}/><br/>
-        <input value={boxess} onChange={(e)=>setBoxess(e.target.value)}/><br/>
-        <input value={options} onChange={(e)=>setOptions(e.target.value)}/> <br/>
+        <label > Название продукта: 
+        <input value={titles} onChange={(e)=>setTitles(e.target.value)}/> </label><br/>
+        <label> Стоимость продукта: 
+            <input value={prices} onChange={(e)=>setPrices(e.target.value)}/></label><br/>
+        <label> Название каталога:
+            <input value={catalogNames} onChange={(e)=>setCatalogNames(e.target.value)}/></label><br/>
+        <label>Общая дллина изделия:
+            <input value={lengths} onChange={(e)=>setLengths(e.target.value)}/></label><br/>
+        <label>Форма изделия:
+            <input value={kitchens} onChange={(e)=>setKitchens(e.target.value)}/></label><br/>
+        <label> Способ открывания:
+            <input value={drawers} onChange={(e)=>setDrawers(e.target.value)}/></label><br/>
+        <label>Фасады:
+            <input value={methods} onChange={(e)=>setMethods(e.target.value)}/></label><br/>
+        <label>Название цвета:
+            <input value={facads} onChange={(e)=>setFacads(e.target.value)}/></label><br/>
+        <label>Петли:
+            <input value={tables} onChange={(e)=>setTables(e.target.value)}/></label><br/>
+        <label>Ящики:
+            <input value={catalogs} onChange={(e)=>setCatalogs(e.target.value)}/></label><br/>
+        <label>Дополнительные параметры:
+            <input value={walls} onChange={(e)=>setWalls(e.target.value)}/></label> <br/>
+        <label>Дополнительные параметры:
+            <input value={loopses} onChange={(e)=>setLoopses(e.target.value)}/></label><br/>
+        <label>Дополнительные параметры:
+            <input value={boxess} onChange={(e)=>setBoxess(e.target.value)}/></label><br/>
+        <label>Дополнительные параметры:
+            <input value={options} onChange={(e)=>setOptions(e.target.value)}/></label> <br/>
         <button type="submit" onClick={submitForm}>Изменить</button>     
         </form>
         <button type="delet" onClick={submitForm1}>Удалить</button>

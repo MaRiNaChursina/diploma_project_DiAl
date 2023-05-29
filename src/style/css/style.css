@@ -62,6 +62,19 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Lab Grotesque", sans-serif;
+  font-weight: 200;
+}
+
+.main__admin, .main, .main__news, .main__work, .main__order, .cart {
+  flex-grow: 1;
+}
+
 .wrapper {
   min-height: 100vh;
   display: flex;
@@ -70,11 +83,25 @@ h1, h2, h3, h4, h5, h6 {
 
 .cart {
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  width: 1500px;
+}
+.cart .cart__about {
+  text-align: right;
+  padding-bottom: 15px;
+}
+.cart .cart__back {
+  margin-top: 35px;
+}
+.cart a {
+  color: #8EA076;
+  -webkit-text-stroke: 0.02em rgba(86, 71, 52, 0.6784313725);
+}
+.cart a:hover {
+  -webkit-text-stroke: 0.02em rgba(86, 71, 52, 0);
 }
 .cart h1 {
-  padding-bottom: 100px;
+  padding-bottom: 20px;
   text-align: center;
   font-size: 30px;
   padding-top: 50px;
@@ -82,6 +109,8 @@ h1, h2, h3, h4, h5, h6 {
 .cart ul {
   display: flex;
   justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .cards {
@@ -139,6 +168,67 @@ h1, h2, h3, h4, h5, h6 {
   width: auto;
 }
 
+.main__order {
+  margin-left: auto;
+  margin-right: auto;
+}
+.main__order a {
+  color: #f9f6f4;
+}
+.main__order .main_order_main {
+  font-size: 35px;
+  font-weight: 250;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+.main__order .main__order_link {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  border: 1px solid #8EA076;
+  margin-top: 35px;
+  background-color: #8EA076;
+}
+.main__order button {
+  margin-top: 10px;
+  background-color: #564734;
+  border-radius: 40%/120%;
+  width: 200px;
+  height: 25px;
+  color: #f9f6f4;
+  font-size: 16px;
+}
+.main__order .order__invoice {
+  background-color: #ddf7d3;
+}
+.main__order .order__raschet {
+  color: #ca8f41;
+}
+.main__order form {
+  background-color: #ddf7d3;
+  padding-top: 25px;
+  text-align: center;
+  font-size: 16px;
+}
+.main__order form input {
+  border-bottom: 1px solid black;
+  background-color: rgba(27, 134, 27, 0.0823529412);
+}
+.main__order form select {
+  border-bottom: 1px solid black;
+  background-color: rgba(27, 134, 27, 0.0823529412);
+}
+.main__order form option {
+  background-color: #8EA076;
+}
+.main__order form h1, .main__order form p {
+  padding-top: 10px;
+}
+.main__order form label {
+  padding-right: 15px;
+}
+
 header .active {
   color: #8EA076;
   cursor: auto;
@@ -185,6 +275,7 @@ header .active {
 
 footer {
   background-color: #564734;
+  flex-shrink: 0;
 }
 
 .footer {
@@ -228,7 +319,13 @@ footer {
   color: #689095;
 }
 
-@media (max-width: 1150px) and (min-width: 870px) {
+@media (max-width: 1150px) {
+  .cart {
+    width: 800px;
+    padding-bottom: 45px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .cards {
     width: 280px;
     height: 280px;
@@ -239,6 +336,9 @@ footer {
   }
 }
 @media (max-width: 800px) {
+  .cart {
+    width: 400px;
+  }
   .model__content-img img {
     height: auto;
     width: 100%;
@@ -251,12 +351,15 @@ footer {
   .model__content-img img {
     margin-top: -30px;
   }
+  .cart {
+    width: 300px;
+  }
   .cards {
-    width: 350px;
-    height: 336px;
+    width: 290px;
+    height: 256px;
   }
   .cards > h2, .cards > p, .cards > button {
-    width: 330px;
+    width: 290px;
     left: 3%;
   }
 }

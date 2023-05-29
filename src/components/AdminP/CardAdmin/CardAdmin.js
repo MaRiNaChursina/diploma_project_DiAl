@@ -9,8 +9,8 @@ function CardAdmin(){
     return(
         <>
         <br/>
-         <Link to="add" onClick={()=>chekadd?setChekadd(false):setChekadd(true)}>Добавить</Link>
-          {chekadd? <> <Outlet /></>:<Cards chekCard={chekCard}/>} 
+         <Link to="add" onClick={()=>chekadd?setChekadd(false):setChekadd(true)}>{chekadd?<>Вернутся к картам</>:<>Добавить</>}</Link>
+          {chekadd? <> <Outlet /></>:<Cards chekCard={chekCard} />} 
         </>
     )
 }

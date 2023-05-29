@@ -8,8 +8,9 @@ function Card(props) {
   const {catalogName}=useParams()
    const {card} = props;
    const {chekCard} =props;
+   const {mainCard} = props;
    const [modalActive, setModalActive] = useState();
-   if (chekCard){
+   if (chekCard && !mainCard){
     return (
       <div className="cards">
           <img src={ card.imgCard}/>
@@ -23,7 +24,7 @@ function Card(props) {
       </div>
     );
    }
-    else if(catalogName == card.catalogName)
+    else if(catalogName == card.catalogName || mainCard)
        return (
           <div className="cards">
               <img src={ card.imgCard}/>

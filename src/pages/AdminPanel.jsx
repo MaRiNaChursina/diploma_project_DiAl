@@ -9,7 +9,7 @@ import LogoAdmin from "../components/AdminP/LogoAdmin";
 export default function AdminPanel(){
    
     return(
-        <div className="main">
+        <div className="main__admin">
             <LogoAdmin/>
         </div>
     )

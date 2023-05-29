@@ -1,25 +1,26 @@
 ﻿import React from "react";
-import cards from "../../data/bd";
+// import card from "../../data/bd";
 import news from "../../data/newsbd";
-import List from "./List";
 import CardNews from "./CardNews";
 import style from "./Main.module.css";
+import Cards from "../Cards";
+import { Link } from "react-router-dom";
 
 
-export default function CardsList(){
-    const cardElement = cards.length;
+export default function CardsList(props){
+    const {cards} = props;
+      
     const newsLength = news.length;
-    const newsList = news.reverse().map(news => 
+    const newsList = news.map(news => 
         <CardNews className={style.main__card_news} key={news.id} newsLength={newsLength} news={news}/>);
-    const cardElements = cards.reverse().map(card => 
-        <List key={card.id} length={cardElement} card={card}/>
-    )
    
+
+        newsList.reverse();
     return(
         <div className={style.main}>
             <div className={style.main__new_work}>
-                {cardElements}
                 
+                <Cards cards = {cards} chekCard={true} mainCard={true}/>
             </div>
             <div className={style.main__new_news}>
                 {newsList}

@@ -23,7 +23,7 @@ export default function  FormAdmin () {
  return(
     <>
     
-         <NavLink to="card" onClick={()=>cheked?setCheked(false):setCheked(true)}>{cheked?"Вернутся назад":"Карточки товара"}</NavLink>  
+         <NavLink to="card" onClick={()=>cheked?setCheked(false):setCheked(true)}>{cheked?"Главная панель":"Карточки товара"}</NavLink>  
          <NavLink>Статьи</NavLink>
          <NavLink>Просмотреть заказы</NavLink> 
          {cheked ?<> <Outlet /></>:<>

@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 // import cards from "../data/bd";
 import CardList from "./CardList";
+import { Link } from "react-router-dom";
 
 
 function Cards(props) {
-  const {chekCard}=props
+  const {chekCard}=props;
+  const {mainCard}=props;
   const [cards,setCards] = useState("");
     
     useEffect(()=>{
@@ -30,8 +32,10 @@ function Cards(props) {
     }
   return (
     <div className="cart">
+        {!chekCard && !mainCard && <div className="cart__back"><Link to="work" >Вернутся назад</Link></div>}
         <h1>Наши работы</h1>
-        {cards &&<><CardList cards = {cards} chekCard={chekCard}/></>}
+        {mainCard && <div className="cart__about"><Link  to="work">Подробнее</Link></div>}
+        {cards &&<><CardList cards = {cards} chekCard={chekCard} mainCard={mainCard}/></>}
         
         
     </div>

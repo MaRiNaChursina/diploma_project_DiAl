@@ -68,8 +68,8 @@ const InvoiceForm = () => {
                 console.log((+value)*(1.8*1.3* (+value10)+ (+value5)+
                 (+value7)*16+2.5* (+value11)));
             if(value2 === "2")
-                setRaschet((Math.ceil((n*1.2+2000* (+value))*1.7))+" P");
-                else setRaschet((Math.ceil((n+2000* (+value))*1.7))+" P");
+                setRaschet((Math.ceil((n*1.2+2000* (+value))*1.7))+" ₽");
+                else setRaschet((Math.ceil((n+2000* (+value))*1.7))+" ₽");
         } else setRaschet(
             <div>
                 <p>Вы ввели не все параметры для расчета!</p>
@@ -392,13 +392,12 @@ const Primer =(value5)=>{
     }
 
     return (
-        <>
+        <div className="order__invoice">
             <form onSubmit={submitForm}>
-            <label for="length">Длина общей протяжонности в метрах</label>
-            <br/>
+            <h1 >Длина общей протяжонности в метрах</h1>
+            
             <input type="number" name="length" required value={value} onChange={(e)=> setValue(e.target.value)} min={1} />
-            <br/>
-            <br/>
+            
 
             {/* Посмотреть как граммотна пишется и добавить картинки, можно по выбору */}
             <h1>Форма кухни</h1>
@@ -407,20 +406,20 @@ const Primer =(value5)=>{
                     <input type="radio" name="radio1" value={item1} required checked1={checked1 === item1} onChange={()=> setChecked1(item1)} />
                     {item1}
                 </label>
-            ))};
-            <br/><br/>
-
-            <label>Форма верхних ящиков</label>
-            <br/>
+            ))}
+            
+            
+            <h1>Форма верхних ящиков</h1>
+            
             <select value={value2} onChange={Antri}required>
                 {/* коэфицент */}
                 <option value="1" >Прямые</option>
                 <option value="2">С антрисолями</option>
             </select>
-            <br/><br/>
+            
 
             <h1>Способы открывания фасада</h1>
-            <br/>
+            
             <select value={value3} onChange={(e)=>setValue3(e.target.value)}required>
                 {/* их выделить , считается 8*метр протяж * на цену->  */}
                 <option value="170" >Ручка</option>
@@ -429,7 +428,7 @@ const Primer =(value5)=>{
                 <option value="500">Интегрированая ручка</option>
                 <option value="501">Ручка Gola</option>
             </select>
-            <br/>
+            
 
             <h1>Фасады</h1>
             {/* 1,8 * метр протяж * цену * 1,3 */}
@@ -442,15 +441,15 @@ const Primer =(value5)=>{
             </select>
 
             <h1>Столешница</h1>
-            <br/>
+            
             <select value={value4} onChange={Stol}required>
                 <option value="1" >Бумажно слоистый пластик</option>
                 <option value="2">Исскуствинный камень</option>
                 <option value="3">HPL плита</option>
                 <option value="4">Кварцевый агломерат</option>
             </select>
-            <br/>
-            {checked3 === true && <div><br/>
+            
+            {checked3 === true && <div>
             <h1>Выбирите ценовую категорию</h1>
             <select value={value5} onChange={Kateg}required>
             <option value="0" ></option>
@@ -464,10 +463,10 @@ const Primer =(value5)=>{
             {checked4 === true && Primer(value5)}
            
             
-            <br/>
+           
             <h1>Стеновая панель</h1>
             
-            <br/>{li}
+            {li}
             <select value={value12} onChange={(e)=>setValue12(e.target.value)}required>
                 <option value="1" >Есть</option>
                 <option value="2">Нет</option>
@@ -476,11 +475,11 @@ const Primer =(value5)=>{
                 Тогда формула ценновая категория стенновой панели * метр протяженности
                 */}
             </select>
-            <br/>
+            
 
             <h1>Петли</h1>
 
-            <br/>
+            
             {/* 16 *метр протяженности * цену */}
             <select value={value7} onChange={(e)=>setValue7(e.target.value)}required>
                 <option value="90" >С доводчиком</option>
@@ -488,15 +487,15 @@ const Primer =(value5)=>{
                 <option value="350">BLUM</option>
             </select>
 
-            <br/>
+            
             <h1>Ящики</h1>
-            <br/>
+            
             <select value={value9} onChange={(e)=>setValue9(e.target.value)}required>
                 <option value="1" >С телескопами</option>
                 <option value="2">С направляющими скрытого монтажа</option>
                 <option value="3" >С металличискими бокавинами</option>
             </select>
-            <br/>
+            
             {value9 === "1" && 
             <div>
                 <input type="radio" name="Ya" value={650} onChange={(e)=>setValue11(e.target.value)}required/>с доводчиками
@@ -524,14 +523,14 @@ const Primer =(value5)=>{
             */}
             {/* Форма расчета:
                 (Все складываем, кроме метр протяж, если коэфицент 2, то + 20% к сумме + метр протяж * 2000) * 1,7
-            */}<br/>
+            */}
             {answer==="true" && <div>
                 <p>Ваш запрос принят!<br/> Ожидайте нашего звонка!</p>
                 </div>}
             
             
-            {checked5== true && <><p> Примерно {raschet}</p><br/>
-            <p>Если Вас все утраивает и хотите отправить свой заказ:</p>
+            {checked5== true && <><p > Примерно <span className="order__raschet">{raschet}</span> </p><br/>
+            <p>Для окончательного расчета сделайте заказ:</p>
             <label for="name">Как к Вам обращаться:</label><input name="name" value={value6} onChange={(e)=> setValue6(e.target.value)}/><br/>
             <label for="phone">Ваш номер телефона:</label><input name="phone" value={value13} onChange={(e)=> setValue13(e.target.value)}/>
             <button type="submit" >Отправить форму</button>
@@ -539,7 +538,7 @@ const Primer =(value5)=>{
             
             </form>
             <button onClick={Raschet} >Произвести расчет</button>
-        </>
+        </div>
     )
 }
 
